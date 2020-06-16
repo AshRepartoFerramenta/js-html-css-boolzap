@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- my style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Boolzap Web</title>
+</head>
+<body>
+    <!-- Creo il wrapper principale -->
+    <div class="chat_wrapper clearfix">
+      <div class="main_content_left float-left">
+          <!-- Inizio la sezione dei loghi e dell avatar -->
+        <section class="my_profile">
+          <div class="my_avatar">
+            <img src="img/logo.png" alt="">
+          </div>
+          <div class="my_profile_icons">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </section>
+        <!-- Inizio la sezione di notifica e di status -->
+        <section class="notification">
+          <div class="notification_icon">
+            <i class="far fa-bell-slash"></i>
+          </div>
+          <div class="activate_notification">
+            <h3>Ricevi notifiche di nuovi messaggi</h3>
+            <a href="#">Attiva notifiche desktop</a>
+          </div>
+        </section>
+        <!-- Inizio la sezione di ricerca utente chat -->
+        <section class="search_chat">
+          <div class="search_chat_wrapper">
+            <i class="fas fa-search"></i>
+            <input id="chat-scorer" type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+          </div>
+        </section>
+        <!-- Inizio sezione chat  -->
+        <!-- Inizio la sezione di contatti in chat -->
+        <section class="chat_list">
+          <ul class="list_style">
+            <li class="item_wrapper active on_active" data-contact="0">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_6.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Love</h3>
+                  <p>Online</p>
+                </div>
+                <div class="last_message_time">
+                  <p>17:53</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="1">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_1.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Valerio</h3>
+                  <p>Online</p>
+                </div>
+                <div class="last_message_time">
+                  <p>14:53</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="2">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_10.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Mamma</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>22:53</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="3">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_3.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Giovanni</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>19:33</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="4">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_7.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Cugino</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>10:42</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="5">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_6.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Tatiana</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>09:13</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="6">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_2.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Ciccio</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>14:23</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="7">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_9.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Angelo</h3>
+                  <p>Online</p>
+                </div>
+                <div class="last_message_time">
+                  <p>12:37</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="8">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_7.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Saro</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>11:00</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="9">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_8.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Savvo l'Africano</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>15:43</p>
+                </div>
+              </div>
+            </li>
+            <li class="item_wrapper" data-contact="10">
+              <div class="chat_list_item">
+                <div class="chat_list_avatar">
+                  <img src="img/avatar_2.jpg" alt="">
+                </div>
+                <div class="current_chat_name">
+                  <h3 class="contact_name">Zio Pippo</h3>
+                  <p>Offline</p>
+                </div>
+                <div class="last_message_time">
+                  <p>16:53</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        </div>
+        <!-- Fine sezione contatti in chat -->
+        <!-- Fine sezione chat  -->
+
+        <!-- Inizio sezione principale finestra chat -->
+        <!-- Inizio info personali  -->
+      <div class="main_content_right float-right">
+        <section class="current_chat">
+          <div class="current_chat_avatar">
+            <img src="img/incodewetrust.jpeg" alt="">
+          </div>
+          <div class="current_chat_name head">
+            <h3 class="head_name">AshRepartoGrandiMagazini</h3>
+            <p class="head_time">Ultimo accesso oggi alle 23:58</p>
+          </div>
+          <div class="current_chat_icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          <!-- Fine info personali -->
+        <!-- Inizio finestra chat -->
+        </section>
+        <section class="conversation active" data-contact = "0">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Da me o da te tonight?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">10:40</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Volentieri! A che ora e dove?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">23:40</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "1">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Ciao come stai?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">12:08</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Ciao! Io sto come Lazzaro...in piedi per miracolo e tu?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">14:40</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "2">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Finalmente posso uscire dopo questa quarantena</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">08:15</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">ma se eri più fuori che a casa!</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">08:18</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "3">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Com'è andato l'esame?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">16:55</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Ho preferito andare a mare con tua sorella</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">16:57</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "4">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Come stai cugino?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">11:05</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Ciao! Scusami ti scrivo dopo che sono sto seguendo la lezione di Scolozzi!!!</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">11:20</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "5">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Ciao! A che ora in palestra stasera?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">21:20</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Si palestra...al massimo puoi fare il sollevatore di forchette !</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">21:30</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "6">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Hai beccato alla Snai?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">06:10</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Come ogni settimana ho vinto l'anima de li mortacci sua</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">09:03</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "7">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Ciao! Quando organizziamo per l'arrusta e mancia ?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">17:31</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Questa domenica sono libero! Ci spacchiamo come se non ci fosse un domani!</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">17:32</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "8">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Berlusconi è ancora un Bomber vero,anche a 97 anni</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">9:40</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">te l'ho detto che il segreto è il Bunga Bunga</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">9:41</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "9">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Andiamo al cinema stasera?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">18:44</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Ottima idea!Paghi tu...io sono povero e aspetto ancora il reddito d'emergenza</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">18:46</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <section class="conversation display_none" data-contact = "10">
+          <div class="message sent">
+            <div class="message-top">
+              <p class="message-text">Colazione al bar domani mattina?</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">22:07</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+          <div class="message received">
+            <div class="message-top">
+              <p class="message-text">Apposto!Briosche e granita,cornetto e involtino alla crema come entrè</p>
+              <i class="fa fa-chevron-down f-right message-options"></i>
+            </div>
+            <div class="message-bottom">
+              <small class="message-time">22:11</small>
+            </div>
+            <div class="dropdown display_none">
+              <h5>Info Messaggio</h5>
+              <h5 class="delete_message">Cancella Messaggio</h5>
+            </div>
+          </div>
+        </section>
+        <!-- Fine finestra chat -->
+
+        <!-- Fine chat con i contatti -->
+        <!-- Fine sezione principale finestra chat -->
+
+        <!-- Inizio Riga di scrittura chat -->
+        <footer class="send_message">
+          <div class="smile_icon flex_center">
+            <i class="far fa-smile"></i>
+          </div>
+          <div class="text_message flex_center">
+            <input id="add-message" type="text" name="" value="" placeholder="Scrivi un messaggio">
+          </div>
+          <div class="send_icon flex_center">
+            <i class="fas fa-microphone"></i>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+
+    <div class="template">
+      <div class="message">
+        <div class="message-top">
+          <p class="message-text"></p>
+          <i class="fa fa-chevron-down f-right message-options">
+            <div class="dropdown display_none">
+            <h5>Info Messaggio</h5>
+            <h5 class="delete_message">Cancella Messaggio</h5>
+          </div>
+        </i>
+        </div>
+        <div class="message-bottom">
+          <small class="message-time"></small>
+        </div>
+      </div>
+    </div>
+    <!-- Fine Riga di scrittura chat -->
+
+
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
